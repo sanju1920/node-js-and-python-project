@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register</title>
+	<link rel="icon" type="image/png" href="./image/heart.png">
+	<link rel="stylesheet"  href="./css/registerstyle.css">
+</head>
+
+
+<body>
+		<div id="particles-js">
+		<a href="/"><img src="./image/idoctor.png" class="logo"></a>
+		<div class="registerBox">
+			<h2> Register For User </h2>
+
+			<form action="/register" method="POST">
+				<p>Name </p>
+				<input type="text" name="name" value="" placeholder=" Enter Name" required/>
+				<p>Email</p>
+				<input type="text" name="email" value="" placeholder="Enter Email"required/>
+				<p>Password</p>
+				<input type="Password" name="Password" placeholder="Enter Password "required/>
+				<p>Confirm Password</p>
+				<input type="Password" name=""  value =""placeholder=" Re-Enter Password "required/>
+				<!--<p>Enter Phone Number</p>
+				<input type="Number" name="phone" value=""required/>-->
+				<input type="submit" value ="Sign up"/>
+				
+			</form>
+		</div>	
+
+		</div>
+		<!--Particles Scripts-->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js','particles.json',function(){
+            console.log('particles.json loaded...');
+        });
+	</script>
+
+</body>
+</html>

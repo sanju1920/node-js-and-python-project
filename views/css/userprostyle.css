@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#particles-js{
+    background:blueviolet;
+    height:100%;
+  }
+.nav-bar
+{
+	background:rgba(0, 0, 0, 0.4);
+	height: 80px;
+}
+.logo
+{
+	margin: 20px 50px;
+	height: 50px;
+	
+}
+.menu
+{
+	float: right;
+	list-style: none;
+	margin: 30px;
+}
+.menu li
+{
+	display: inline-block;
+	margin: 10px 5px;
+}
+#inp{
+  border: 0vh;
+  background:#f1f1f1;
+}
+.menu li a
+{
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;
+	font-family: sans-serif;
+  font: bolder;
+  font-size: 20px;
+	letter-spacing: 1px;
+	
+}
+.box1{
+  position:absolute ;
+  float: left;
+  background:rgba(0,0,0,.4);
+  margin: 1%;
+  margin-left: 10%;
+  width: 80%;
+  height: 50%;
+  color: white;
+}
+.innerbox{
+  position: relative;
+  margin:1%;
+  margin-left:1%;
+  float: left;
+  width:17%;
+  height:60%;
+  background:rgba(0,0,0,.5);
+  margin-bottom: 1%;
+  padding: 1%;
+}
+.innerbox image{
+  margin:1%;
+  margin-left: 1%;
+  width:80%;
+  height:60%;
+}
+.box2{
+  position: absolute;
+  float : left;
+  background:  rgba(0,0,0,.4);
+  margin: 27%;
+  margin-left: 10%;
+  color:white;
+  width: 80%;
+  height: auto;
+}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  margin: 10px 10px;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.review {
+  display: inline-block; 
+  padding: 0 25px;
+  height: auto;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color:black;
+  margin: 10px 10px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor</title>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="./image/heart.png">
+	<link rel="stylesheet" type="text/css" href="./css/userpref.css">
+	<link rel="stylesheet" type="text/css" href="./css/rating.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="particles-js">
+		<div class =" nav-bar">
+			<a href="/"><img src="./image/idoctor.png" class="logo"></a>
+			<ul class ="menu">
+				<% if (flag==null) { %>	<li><a href="/login1">Login</a></li> <% } %>
+				<% if (flag=="user") { %> <li><a href="/userprofile"><strong>Profile</strong></a></li> <% } %>
+				<% if (flag=="doctor") { %> <li><a href="/doctorprofile"><strong>Profile</strong></a></li> <% } %>
+				<% if (flag == "doctor" || flag == "user") { %>	<li><a href="/logout"><strong>Logout</strong></a></li> <% } %>
+				<% if (flag==null) { %>
+					<li><div class="dropdown">			
+							<strong>Sign Up</strong>
+							<div class="dropdown-content">
+								<a href="/registerd">Doctor</a>
+								<a href="/register">User</a>
+							</div>			
+						</div>
+					</li> 
+				<% } %>	
+			</ul>
+		</div>
+    
+		<div class="card">
+			<img src="./image/avatar_img.png" alt="John" style="width:100%">
+			<h3>Dr.	<%=row[0].name %>  </h3>
+			<p class="title"> <br>
+				<%=row[0].sex %> | <%=row[0].age %><br>
+				Specialist in <%=row[0].specification %><br>
+				<%=row[0].experience %> years of exp.<br>
+				Contact <%=row[0].phone %><br>
+				<%=row[0].address %> <%=row[0].city %><br>
+				<%=row[0].state %> <%=row[0].zip %> <br><br> 
+			</p>	
+		</div>
+
+		<div class="rating">
+			<br>
+			<center>	
+				<span class="heading">Rating</span>
+				<h1>
+					<%for(var j=0;j<Math.round(r[0].rate);j++){%>
+						<span class="fa fa-star checked"></span><%}%>
+					<%for(var j=0;j<5-Math.round(r[0].rate);j++){%>
+						<span class="fa fa-star"></span><%}%>
+				</h1>
+			<p><%=r[0].rate%> average based on <%=r[0].reviewno%>  reviews.<br><br></p></center>
+			<hr style="border:2px solid #f1f1f1"> <!--underline-->
+
+			<div class="left0">
+				<div class="chip"><h3>Payment</h3></div><br>
+				<div class="chip"><h3>Trustworthiness</h3></div><br>
+				<div class="chip"><h3>Appointment and visits</h3></div><br>
+				<div class="chip"><h3>Behavioural Aspect</h3></div>			
+			</div>
+			<div class="right0">	
+					<div class="star">
+						<h1>	<%for(var j=0;j<Math.round(r[0].f1);j++){%>
+							<span class="fa fa-star checked"></span><%}%>
+						<%for(var j=0;j<5-Math.round(r[0].f1);j++){%>
+							<span class="fa fa-star"></span><%}%>
+						</h1>
+					</div><br>
+					<div class="star">
+					
+						<h1>	<%for(var j=0;j<Math.round(r[0].f2);j++){%>
+							<span class="fa fa-star checked"></span><%}%>
+						<%for(var j=0;j<5-Math.round(r[0].f2);j++){%>
+							<span class="fa fa-star"></span><%}%>
+						</h1>
+					</div><br>
+					<div class="star">
+						<h1>	<%for(var j=0;j<Math.round(r[0].f3);j++){%>
+							<span class="fa fa-star checked"></span><%}%>
+						<%for(var j=0;j<5-Math.round(r[0].f3);j++){%>
+							<span class="fa fa-star"></span><%}%>
+						</h1>
+					</div><br>
+					<div class="star">
+						<h1>	<%for(var j=0;j<Math.round(r[0].f4);j++){%>
+							<span class="fa fa-star checked"></span><%}%>
+						<%for(var j=0;j<5-Math.round(r[0].f4);j++){%>
+							<span class="fa fa-star"></span><%}%>
+						</h1>
+					</div>
+			</div>
+		</div>
+		
+		<div class="footer">						<br><br>
+			<center><h1>Leave a Message</h1></center>
+			<form action="/data" method="post">
+				<div class="star">
+							<input type="radio" name="Star" value="5" id="Star1"><label for="Star1"></label>
+							<input type="radio" name="Star" value="4"  id="Star2"><label for="Star2"></label>
+							<input type="radio" name="Star" value="3" id="Star3"><label for="Star3"></label>
+							<input type="radio" name="Star" value="2"  id="Star4"><label for="Star4"></label>
+							<input type="radio" name="Star"  value="1" id="Star5"><label for="Star5"></label>
+				</div>
+				<div  class="comment">
+					<textarea name="message" id="message" rows="6" placeholder="Message Area" required></textarea><br>
+				</div>
+				<div class="left">
+						<div class="chip"><h2>Payment</h2></div><br>
+						<div class="chip"><h2>Trustworthiness</h2></div><br>
+						<div class="chip"><h2>Appointment and visits</h2></div><br>
+						<div class="chip"><h2>Behavioural Aspect</h2></div><br>		
+				</div>
+				<div class="right">	
+							<div class="star">
+								<input type="radio" name="Star1" value="5" id="Star11"><label for="Star11"></label>
+								<input type="radio" name="Star1" value="4"  id="Star22"><label for="Star22"></label>
+								<input type="radio" name="Star1" value="3" id="Star33"><label for="Star33"></label>
+								<input type="radio" name="Star1" value="2"  id="Star44"><label for="Star44"></label>
+								<input type="radio" name="Star1"  value="1" id="Star55"><label for="Star55"></label>
+								
+							</div><br>
+							<div class="star">
+							
+								<input type="radio" name="Star2" value="5" id="Star6"><label for="Star6"></label>
+								<input type="radio" name="Star2" value="4"  id="Star7"><label for="Star7"></label>
+								<input type="radio" name="Star2" value="3" id="Star8"><label for="Star8"></label>
+								<input type="radio" name="Star2" value="2"  id="Star9"><label for="Star9"></label>
+								<input type="radio" name="Star2"  value="1" id="Star10"><label for="Star10"></label>
+								
+							</div><br>
+							<div class="star">
+								<input type="radio" name="Star3" value="5" id="Star13"><label for="Star13"></label>
+								<input type="radio" name="Star3" value="4"  id="Star14"><label for="Star14"></label>
+								<input type="radio" name="Star3" value="3" id="Star15"><label for="Star15"></label>
+								<input type="radio" name="Star3" value="2"  id="Star16"><label for="Star16"></label>
+								<input type="radio" name="Star3"  value="1" id="Star17"><label for="Star17"></label>
+								
+							</div><br>
+							<div class="star">
+								<input type="radio" name="Star4" value="5" id="Star23"><label for="Star23"></label>
+								<input type="radio" name="Star4" value="4"  id="Star24"><label for="Star24"></label>
+								<input type="radio" name="Star4" value="3" id="Star25"><label for="Star25"></label>
+								<input type="radio" name="Star4" value="2"  id="Star26"><label for="Star26"></label>
+								<input type="radio" name="Star4"  value="1" id="Star27"><label for="Star27"></label>
+								
+							</div>
+				</div>
+				<input type="hidden" name="doctorname" value = <%=row[0].email %> >
+				<input type="hidden" name="username" value = <%=t %> >
+				<div class="bot"> <input value=" Send Message " class="button alt" type="submit"></div>
+			</form>
+		</div>
+	</div>
+	<!--particles Script-->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js','particles.json',function(){
+            console.log('particles.json loaded...');
+        });
+	</script>
+</body>
+</html>

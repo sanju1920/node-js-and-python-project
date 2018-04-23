@@ -1,0 +1,354 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.nav-bar
+{
+  height: 80px;
+  background:rgba(0, 0, 0, 0.4);
+}
+.logo
+{
+	margin: 20px 50px;
+	height: 50px;
+}
+.menu
+{
+	float: right;
+	list-style: none;
+	margin: 30px;
+}
+.menu li
+{
+	display: inline-block;
+	margin: 10px 5px;
+}
+.menu li a
+{
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;
+	font-family: sans-serif;
+  font: bolder;
+  font-size: 20px;
+	letter-spacing: 1px;
+	
+}
+.card {
+  position: absolute;
+  height: 500px;
+  float: left;
+  color:white;
+  background:rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 20px 120px;
+  text-align: center;
+  font-family: arial;
+}
+.footer {
+  position: absolute;
+  float:left;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 550px 120px;
+  width: 84%;
+  color:whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 850px;
+}
+.rating{
+    position:absolute ;
+    float: left;
+    background:rgba(0, 0, 0, 0.4);
+    margin: 20px 440px;
+    width: 1100px;
+    height: 500px;
+    color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.rating1{
+  position: absolute;
+    float : left;
+    margin: 350px 400px;
+    width: 900px;
+    background: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 300px;
+}
+
+.reviews{
+  background:rgba(0, 0, 0, 0.4);
+    position: absolute;
+    float : left;
+    margin: 350px 400px;
+    width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: auto;
+
+}
+  
+  .title {
+    color: whitesmoke;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  h4{
+    font-family: monospace;
+    color: #1f9cff;
+  }
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background:transparent;
+    opacity:1px;
+    margin: 10px 10px;
+    color:whitesmoke;
+  }
+
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .revchip {
+    display: inline-block;
+    padding: 0 25px;
+    height: auto;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    margin: 10px 10px;
+  }
+.inner{
+  position: absolute;
+}
+.footer input{
+	width: 40%;
+	margin-bottom: 10px;
+}
+
+.footer input[type="number"]{
+  margin: 8px 0px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+	outline: none;
+  height: 40px;
+  width:100%;
+
+}
+.footer textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+.left0{
+  position: absolute;
+  opacity:1;
+  left: 15%;
+  top: 35%;
+  width: 50%;
+  height: auto;
+
+}
+.right0{
+  position:absolute;
+  opacity:1;
+  left: 30%;
+  top: 28%;
+  width: 50%;
+  height: auto;
+  
+  }
+.left{
+  position: absolute;
+  opacity:1;
+  left: 20%;
+  top: 50%;
+  width: 50%;
+  height: auto;
+
+}
+.right{
+position:absolute;
+opacity:1;
+left: 50%;
+top: 48%;
+width: 50%;
+height: auto;
+
+}
+.bot{
+  position:absolute;
+  top: 85%;
+  margin-left: 550px;
+  width: 50%;
+  height: 20%;
+}
+.star{
+  position: relative;
+	left: 9%;
+	transform: translate(-50%,50%) rotateY(180deg);
+	display: flex;
+}
+.star input
+{
+	display: none;
+
+}
+.star h1
+{
+  content: '\f005';
+	font-family: fontAwesome;
+  position: relative;
+  transform: translate(-50%,50%) rotateY(180deg);
+	display: block;
+	font-size: 50px;
+	color: #101010;
+}
+.star label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+	
+}
+.star label:before
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: relative;
+	display: block;
+	font-size: 50px;
+	color: #101010;
+}
+.star label:after
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 50px;
+	color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transition: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.star label:hover:after,
+.star label:hover ~label:after,
+.star input:checked ~label:after
+{
+	opacity: 1;
+}
+.comment {
+  position: absolute;
+  top: 15%;
+  width:80%;
+  margin:50px;
+  height:20%;
+}
+.comment textarea{
+
+  height: 100%;
+  width: 100%;
+  margin-left: 10%;
+  background:whitesmoke;
+
+}
+.bot input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 20px;
+	background:#0d81e1;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.dropdown {
+  position: relative;
+display: inline-block;
+text-decoration: none;
+color: white;
+padding: 5px 10px;
+font-family: sans-serif;
+font: bolder;
+letter-spacing: 2px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #928d8d}
+
+.dropdown:hover .dropdown-content {
+display: block;
+background:hsl(60, 19%, 93%);
+transition: .4s;
+color: #807777;
+
+}
+
+.dropbtn {
+  background-color: rgb(154, 180, 155);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+#particles-js{
+  background:blueviolet;
+  height:200vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

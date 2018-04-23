@@ -1,0 +1,46 @@
+#particles-js{
+  background:blueviolet;
+  height:100%;
+}
+.rat{
+  position:absolute ;
+  float: left;
+  margin: 20px 440px;
+  width: 1100px;
+  height: 800px;
+  background:rgba(0,0,0,.4);
+}
+
+.f1{
+width: 50%;
+position:absolute;
+height: 100%;
+border:black;
+margin-left: 20%;
+}
+.f2{
+  position:absolute;
+  left: 40%;
+  width: 50%;
+  height: 100%;
+}
+.f2 input{
+  border: none;
+	border-bottom: 1px solid white;
+	background:transparent;
+	outline: none;
+	height: 40px;
+	color: white;
+	font-size: 16px;
+}
+.f2 input[type="submit"]
+{
+  border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background:blueviolet;
+	cursor: pointer;
+	border-radius: 20px;
+}

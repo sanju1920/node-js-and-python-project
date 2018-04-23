@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Doctor</title>
+		<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="./image/heart.png">
+		<link rel="stylesheet" type="text/css" href="./css/userprostyle.css">
+</head>
+
+<body>
+	<div id="particles-js">
+		<div class =" nav-bar">
+			<a href="/"><img src="./image/idoctor.png" class="logo"></a>
+			<ul class ="menu">	
+					<li><a href="/userprofile">Hi ! <%=rr[0].name %></a></li>
+					<li><a href="/logout">Log Out</a></li>
+			</ul>
+		</div>
+
+	
+			
+	<div class='box1'><br>
+		<center><h1>Recommended Doctors</h1></center><br>
+		<%for(var j=0;j<recom.length;j++){%>
+		<div class="innerbox">
+			<div class"image"><img src="./image/male.png"></div><br>
+			<form method="POST" action="/userpref">
+				<input type="hidden" name="view" value = <%=recom[j].email %> >
+				<div class="chip">
+				<input type="submit" id="inp" value="<%=recom[j].name%>"><br>
+			</div>
+			</form>
+			
+		</div>
+		<%}%>
+	</div>
+
+	<div class="box2"><br>
+		<center><h1>Reviews</h1></center><br>
+		<%for(var j=0;j<row.length;j++){%>
+		<div class="chip">
+			<img src="./image/avatar_img.png" alt="Person" width="96" height="96">
+			<a href="#"><%=row[j].name%></a>
+		</div>
+	<br>
+	<div class="review">
+		<%=row[j].comment%>
+	</div>
+	<%}%>
+	
+
+
+</div>
+</div>
+</div>
+<!--Particles script-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js','particles.json',function(){
+            console.log('particles.json loaded...');
+        });
+	</script>
+</body>
+</html>

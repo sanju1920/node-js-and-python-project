@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Result</title>
+	<link rel="icon" type="image/png" href="./image/heart.png">
+	<link rel="stylesheet"  href="./css/searchstyle.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	
+</head>
+
+
+<body>
+				<div id="particles-js">
+				<div class =" nav-bar">
+					<a href="/"><img src="./image/idoctor.png" class="logo"></a>
+			
+				<ul class ="menu">
+								
+										
+						<% if (flag==null) { %>	<li><a href="/login1"><strong>Login</strong></a></li> <% } %>
+						<% if (flag=="user") { %> <li><a href="/userprofile"><strong>Profile</strong></a></li> <% } %>
+						<% if (flag=="doctor") { %> <li><a href="/doctorprofile"><strong>Profile</strong></a></li> <% } %>
+						<% if (flag == "doctor" || flag == "user") { %>	<li><a href="/logout"><strong>Logout</strong></a></li> <% } %>
+						<% if (flag==null) { %><li><div class="dropdown">
+								<strong>Sign Up</strong>
+								<div class="dropdown-content">
+									
+										<a href="/registerd">Doctor</a>
+	
+										<a href="/register">User</a>
+									
+								</div>
+						</div>
+						</li> <% } %>
+				</ul>
+				
+			
+</div>
+		<div class="box">
+		<div class ="search">
+	
+			<form action="/search" method="POST">
+					<input type="text" name="doctorname" placeholder="	Look for Doctors	">
+					<input type="text" name="location" placeholder="	Type in location	" >
+					<input type="submit" name=""  value="GO">
+			</form>
+
+			<% for(var i =0; i<row.length;i++){%>
+				
+			<div class="doctor">
+				<div class="name">
+					<div class="pic"><img src="./image/male.png"></div>
+					<div class="add">	<br>
+						<h3>Dr. <%=row[i].name %> </h3><br>
+						<h3> Age: <%=row[i].age %> | <%=row[i].sex %> </h3><br>
+						<h3> <%=row[i].specification %> </h3>
+						<br>
+						<h1>
+							<%for(var j=0;j<Math.round(row[i].rating);j++){%>
+							<span class="fa fa-star checked"></span><%}%>
+
+							<%for(var j=0;j<5-Math.round(row[i].rating);j++){%>
+								<span class="fa fa-star"></span><%}%>
+						</h1>
+					</div>
+				</div>
+				<div class="location">
+					<div class="locpic"><img src="./image/loc.jpg" ></div>
+					<h3><%=row[i].address %></h3><br>
+					<h3><%=row[i].city %>  <%=row[i].state %>.</h3><br>
+					<h3>PIN: <%=row[i].zip %> </h3>
+				</div>
+				<div class="call">
+					<img src="./image/call.png"><br>
+					<h3><%=row[i].phone %></h3><br>
+					<form method="POST" action="/userpref">
+						<input type="hidden" name="view" value = <%=row[i].email %> >
+					<input value=" View more " type="submit">
+					</form>
+				</div>
+			</div>
+			
+			<br><br>
+			<%}%>
+		
+		</div>
+</div>
+
+	</div>
+		
+		<!--Particles Scripts-->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js','particles.json',function(){
+            console.log('particles.json loaded...');
+        });
+	</script>			
+</body>
+</html>
